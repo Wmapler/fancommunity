@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="notitle">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="select_item">
+        <item name="android:textSize">160dp</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.Full" parent="AppTheme.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="Theme.Forecast" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <!--<item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>-->
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="todaytext">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="indextext">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <!--自定义布局背景-->
+    <!--<style name="InputBoxStyle">
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginLeft">18dp</item>
+        <item name="android:layout_marginRight">18dp</item>
+        <item name="android:background">@drawable/my_edittext</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+    </style>-->
+    <!--自定义布局背景-->
+    <!--<style name="InputBoxStyleCode">
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginLeft">18dp</item>
+        <item name="android:layout_marginRight">18dp</item>
+        <item name="android:background">@drawable/my_text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+    </style>-->
+    <!--自定义输入框-->
+    <style name="EditTextStyle">
+        <item name="android:layout_marginTop">5sp</item>
+        <item name="android:layout_marginRight">10sp</item>
+        <item name="android:layout_marginBottom">5sp</item>
+        <item name="android:layout_marginLeft">10sp</item>
+        <item name="android:background">@null</item>
+    </style>
+    <!--自定义输入框-->
+    <style name="EditTextStyleId">
+        <item name="android:layout_marginTop">5sp</item>
+        <item name="android:layout_marginRight">20sp</item>
+        <item name="android:layout_marginBottom">5sp</item>
+        <item name="android:layout_marginLeft">30sp</item>
+        <item name="android:background">@null</item>
+    </style>
+    <!--无下划线输入框-->
+    <style name="EditTextStyleAcc">
+        <item name="android:paddingStart">4dp</item>
+        <item name="android:background">@null</item>
+    </style>
+    <!--自定义复选框-->
+    <style name="My_CheckBox" parent="Theme.AppCompat.Light">
+        <item name="android:colorControlActivated">@color/brown</item>//激活后
+        <item name="android:colorControlNormal">@color/brown</item>//激活前
+    </style>
+
+    <!--自定义dialog背景全透明无边框theme -->
+    <style name="Dialog_Msg" parent="android:style/Theme.Dialog">
+        <!--背景颜色及和透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <!--返回按钮样式-->
+    <style name="BackButton">
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingHorizontal" tools:ignore="NewApi">10dp</item>
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+    <!--更多按钮样式-->
+    <!--<style name="MoreButton">
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">5dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:src">@drawable/selector_more</item>
+    </style>-->
+    <!--全部评论页面小标题-->
+    <!--<style name="RemarkDetailSubTitle">
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:paddingHorizontal" tools:ignore="NewApi">8dp</item>
+        <item name="android:paddingVertical" tools:ignore="NewApi">3dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:textSize">@dimen/main_text</item>
+    </style>-->
+
+
+
+</resources>

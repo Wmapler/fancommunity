@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="status">
+        <item>未解决</item>
+        <item>已解决</item>
+        <item>解决中</item>
+    </string-array>
+</resources>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/weatherbackground"
+    android:id="@+id/out_layout">
+
+    <LinearLayout
+        android:id="@+id/frag_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/text_homename"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"
+            android:text="幸福里"></TextView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/frag_tv_city"
+                style="@style/todaytext"
+                android:text="天津"
+                android:textSize="40sp" />
+            <!--                android:layout_below="@id/frag_tv_currenttemp"/>-->
+            <TextView
+                android:id="@+id/frag_tv_currenttemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/frag_iv_today"
+                android:text="20°C"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/frag_tv_condition"
+                style="@style/todaytext"
+                android:layout_below="@id/frag_tv_city"
+                android:text="阴" />
+
+            <TextView
+                android:id="@+id/frag_tv_date"
+                style="@style/todaytext"
+                android:layout_below="@id/frag_tv_condition"
+                android:layout_marginTop="20dp"
+                android:text="2023-5-7" />
+
+            <TextView
+                android:id="@+id/frag_tv_wind"
+                style="@style/todaytext"
+                android:layout_below="@id/frag_tv_date"
+                android:layout_marginTop="5dp"
+                android:text="风力3~4级" />
+
+            <TextView
+                android:id="@+id/frag_tv_line1"
+                android:layout_width="2dp"
+                android:layout_height="25dp"
+                android:layout_alignBottom="@id/frag_tv_wind"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@id/frag_tv_wind"
+
+                android:background="#000000" />
+
+            <TextView
+                android:id="@+id/frag_tv_temprange"
+                style="@style/todaytext"
+                android:layout_alignBottom="@id/frag_tv_wind"
+                android:layout_toRightOf="@id/frag_tv_line1"
+                android:text="10~26℃" />
+
+
+            <ImageView
+                android:id="@+id/frag_iv_today"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignParentRight="true"
+
+                android:scaleType="centerCrop" />
+        </RelativeLayout>
+        <!-- 用于显示未来三天的天气情况-->
+        <!-- 用于显示未来三天的天气情况-->
+        <!--<LinearLayout
+            android:id="@+id/frag_center_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/top_color"
+            android:orientation="vertical"
+            android:padding="10dp">
+        </LinearLayout>-->
+        <!-- 用于表示指数信息的线性布局-->
+
+
+            <!--<androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/frag_rv_weather"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="通知"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right">
+            </LinearLayout>
+
+        </LinearLayout>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/frag_rv_notice"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

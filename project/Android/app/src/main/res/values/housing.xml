@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="housing">
+        <item>未知</item>
+        <item>幸福里</item>
+        <item>左岸春天</item>
+        <item>阳光城</item>
+        <item>尚水河畔</item>
+        <item>育菲园</item>
+    </string-array>
+</resources>

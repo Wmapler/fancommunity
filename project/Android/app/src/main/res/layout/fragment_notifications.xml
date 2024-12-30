@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myself_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--android:background="@drawable/bg_main"
+    tools:context=".acitvity.ui.myself.MyselfFragment"-->
+    <!--个人信息-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140sp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15sp"
+        android:layout_marginTop="40sp"
+        android:layout_marginRight="15sp"
+        android:padding="30dp">
+        <!--  头像  -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="80sp"
+            android:layout_height="80sp"
+            android:layout_marginStart="10sp"
+            app:cardCornerRadius="50sp">
+
+            <ImageView
+                android:id="@+id/myself_iv_icon"
+                android:layout_width="120sp"
+                android:layout_height="120sp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+
+                android:src="@drawable/head_pic"
+                tools:ignore="VisualLintBounds" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="120sp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/myself_tv_name"
+                android:layout_width="120sp"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/myself_tv_phone"
+                android:layout_width="120sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18sp"
+                android:text=""
+                android:textSize="15sp" />
+        </LinearLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/myself_toinfo_im_info"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10sp"
+            android:src="@drawable/ic_back_right" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--记录-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLayout1"
+            android:layout_marginLeft="15sp"
+            android:layout_marginTop="200sp"
+            android:layout_marginRight="15sp"
+            android:background="@drawable/bg_white_radius_10_92"
+            android:orientation="vertical">
+
+            <!--报修记录-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10sp"
+
+                    android:src="@drawable/repairs" />
+
+                <TextView
+                    android:id="@+id/myself_tv_repair"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:gravity="left|center"
+                    android:paddingLeft="38sp"
+                    android:paddingRight="10sp"
+                    android:text="报修记录"
+                    android:textColor="@color/gray"
+                    android:textSize="15sp"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/ic_back_right" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@color/gray" />
+            <!--报名活动-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10sp"
+                    android:src="@drawable/event" />
+
+                <TextView
+                    android:id="@+id/myself_tv_event_enroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:gravity="left|center"
+                    android:paddingLeft="38sp"
+                    android:paddingRight="10sp"
+                    android:text="报名活动"
+                    android:textColor="@color/gray"
+                    android:textSize="15sp"
+                    tools:ignore="RtlHardcoded" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/ic_back_right" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@color/gray" />
+            <!--消息中心-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10sp"
+                    android:src="@drawable/message" />
+
+                <TextView
+                    android:id="@+id/myself_tv_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:gravity="left|center"
+                    android:paddingLeft="38sp"
+                    android:paddingRight="10sp"
+                    android:text="消息中心"
+                    android:textColor="@color/gray"
+                    android:textSize="15sp"
+                    tools:ignore="RtlHardcoded" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/ic_back_right" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@color/gray" />
+            <!--意见反馈-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10sp"
+                    android:src="@drawable/feedback" />
+
+                <TextView
+                    android:id="@+id/myself_tv_feedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:gravity="left|center"
+                    android:paddingLeft="38sp"
+                    android:paddingRight="10sp"
+                    android:text="意见反馈"
+                    android:textColor="@color/gray"
+                    android:textSize="15sp"
+                    tools:ignore="RtlHardcoded" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/ic_back_right" />
+            </RelativeLayout>
+            <!--<View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@color/gray" />-->
+            <!--问卷记录-->
+            <!--<RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10sp"
+                    android:src="@drawable/questionnaire" />
+
+                <TextView
+                    android:id="@+id/myself_tv_questionnaire"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:gravity="left|center"
+                    android:paddingLeft="38sp"
+                    android:paddingRight="10sp"
+                    android:text="问卷记录"
+                    android:textColor="@color/gray"
+                    android:textSize="15sp"
+                    tools:ignore="RtlHardcoded" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/ic_back_right" />
+            </RelativeLayout>-->
+
+            <!--<View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@color/grey_a" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10sp"
+                    android:contentDescription="@string/icon"
+                    android:src="@drawable/ic_creation" />
+
+                <TextView
+                    android:id="@+id/myself_creation"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:gravity="left|center"
+                    android:paddingLeft="38sp"
+                    android:paddingRight="10sp"
+                    android:text="我的创作"
+                    android:textColor="@color/grey_3"
+                    android:textSize="@dimen/main_text"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10sp"
+                    android:contentDescription="@string/icon"
+                    android:src="@drawable/ic_back_right" />
+            </RelativeLayout>-->
+        </LinearLayout>
+        <!--修改密码，清除缓存-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginRight="15sp"
+            android:background="@drawable/bg_white_radius_10_92"
+            android:orientation="vertical">
+            <!--修改密码-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10sp"
+                    android:src="@drawable/edit" />
+
+                <TextView
+                    android:id="@+id/myself_tv_edit_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:gravity="left|center"
+                    android:paddingLeft="38sp"
+                    android:paddingRight="10sp"
+                    android:text="修改密码"
+                    android:textColor="@color/gray"
+                    android:textSize="15sp"
+                    tools:ignore="RtlHardcoded" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/ic_back_right" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@color/gray" />
+            <!--清理缓存-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10sp"
+                    android:src="@drawable/clean" />
+
+                <TextView
+                    android:id="@+id/myself_tv_clean_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:gravity="left|center"
+                    android:paddingLeft="38sp"
+                    android:paddingRight="10sp"
+                    android:text="清理缓存"
+                    android:textColor="@color/gray"
+                    android:textSize="15sp"
+                    tools:ignore="RtlHardcoded" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/ic_back_right" />
+            </RelativeLayout>
+        </LinearLayout>
+        <!--关于-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginTop="20sp"
+            android:background="@drawable/bg_white_radius_10_92"
+            android:layout_marginRight="15sp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10sp"
+                    android:src="@drawable/about" />
+
+                <TextView
+                    android:id="@+id/myself_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:gravity="left|center"
+                    android:paddingStart="38sp"
+                    android:paddingEnd="10sp"
+                    android:text="关于"
+                    android:textColor="@color/gray"
+                    android:textSize="15sp"
+                    tools:ignore="RtlHardcoded,VisualLintOverlap" />
+
+                <TextView
+                    android:id="@+id/myself_about_version"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:gravity="right|center"
+                    android:paddingRight="30sp"
+                    android:text=""
+                    android:textColor="@color/gray"
+                    android:textSize="16sp"
+                    tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/ic_back_right" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--退出登录-->
+    <TextView
+        android:id="@+id/myself_tv_logout"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:background="@drawable/bg_white_radius_15_92"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        android:layout_marginBottom="70sp"
+        android:gravity="center"
+        android:text="退出登录"
+        android:textColor="@color/gray"
+        android:textSize="15sp" />
+    <!--底部弹窗-->
+    <LinearLayout
+        android:id="@+id/change_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/chooseFromAlbum"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/gray"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/gray" />
+
+        <TextView
+            android:id="@+id/myself_tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="退出"
+            android:textColor="@color/gray"
+            android:textSize="18sp" />
+    </LinearLayout>
+</RelativeLayout>

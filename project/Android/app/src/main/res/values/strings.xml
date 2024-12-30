@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SmartCommunity</string>
+    <string name="title_activity_homepage">ActivityHomepage</string>
+    <string name="title_home">主页</string>
+    <string name="title_dashboard">服务</string>
+    <string name="title_notifications">我的</string>
+</resources>

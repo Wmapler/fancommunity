@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- 允许网络连接，必选 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 访问设备状态，必选 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 访问网络定位(可选)，如果使用系统定位，该权限为必选 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 访问GPS定位(可选)，如果使用系统定位，该权限为必选 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 悬浮窗权限(可选)，如果使用悬浮窗功能，该权限为必选 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 访问WiFi状态，可选 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 朗读 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission
+        android:name="android.permission.RECEIVE_BOOT_COMPLETED"
+        tools:node="remove" /> <!-- 允许获取设备和运营商信息，用于问题排查和网络定位（无gps情况下的定位），若需网络定位功能则必选 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 允许获取网络状态，用于网络定位（无gps情况下的定位），若需网络定位功能则必选 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 允许获取wifi网络信息，用于网络定位（无gps情况下的定位），若需网络定位功能则必选 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 允许获取wifi状态改变，用于网络定位（无gps情况下的定位），若需网络定位功能则必选 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 后台获取位置信息，若需后台定位或持续导航则必选 -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" /> <!-- 用于申请调用A-GPS模块,卫星定位加速 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" /> <!-- 允许写入扩展存储，用于写入缓存定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 用于用户链接蓝牙时，在导航组件页面的蓝牙连接提醒，建立链接后开发者可选用蓝牙通道进行tts播报 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" /> <!-- 用与导航状态中保持屏幕常亮 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 允许读设备等信息，用于问题排查 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".utils.MyApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logoko"
+        android:label="阳光社区"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".ActivityClean"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityAbout"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityNearby"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityPloice"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityDefraud"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityWeather"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityChangePassword"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityOneApply"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityApplyList"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityTelList"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityOneFeedback"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityFeedbackList"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityOneRepair"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityRepairList"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityWelcome"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ActivityForFeedback"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityForRepair"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityPerInfomation"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityEventList"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityNoticeList"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityOneEvent"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityOneNotice"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityHomepage"
+            android:exported="true"
+            android:label="@string/title_activity_homepage" />
+        <activity
+            android:name=".ActivityServe"
+            android:exported="true" />
+        <activity
+            android:name=".ActivityCompeleteInformation"
+            android:exported="true" />
+        <activity
+            android:name=".ActivitySignUp"
+            android:exported="false" />
+        <activity
+            android:name=".ActivitySignIn"
+            android:exported="true"
+            android:theme="@style/AppTheme.Base" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+
+        <service android:name=".utils.AlarmService" />
+
+        <receiver android:name=".utils.AlarmReceiver" />
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="2408a423dbf63f3bb1316621df012c87" />
+    </application>
+
+</manifest>

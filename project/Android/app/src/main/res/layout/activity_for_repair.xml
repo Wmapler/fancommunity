@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dp"
+    tools:context=".ActivityForRepair">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_marginBottom="35dp"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+            android:id="@+id/button_for_repair_back"
+            app:title="返回" />
+        <EditText
+            android:id="@+id/for_repair_et_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_background"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:textSize="20dp"
+            android:padding="12dp"
+            android:hint="请输入标题">
+        </EditText>
+
+        <EditText
+            android:id="@+id/for_repair_et_content"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/edit_background"
+            android:textSize="15dp"
+            android:padding="12dp"
+            android:hint="请输入正文">
+        </EditText>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/lightblue"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <ImageView
+                android:id="@+id/for_repair_im_up_img"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:background="@drawable/upimg" />
+            <Button
+                android:id="@+id/for_repair_bt_up_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="点击上传图片"
+                android:layout_toRightOf="@+id/for_repair_im_up_img"
+                android:background="@color/lightblue"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/for_repair_bt_yes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/translucent_button"
+            android:padding="6dp"
+            android:text="确   定"
+            android:textColor="@color/white"
+            android:textSize="18dp">
+        </Button>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/for_repair_tv_tolist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="点击显示列表"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black">
+            </TextView>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_below="@+id/for_repair_tv_tolist"
+                android:layout_alignLeft="@+id/for_repair_tv_tolist"
+                android:layout_alignRight="@+id/for_repair_tv_tolist"
+                android:background="#008577" />
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

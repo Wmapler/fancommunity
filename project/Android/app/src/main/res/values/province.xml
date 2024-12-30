@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="province">
+        <item>天津市</item>
+        <item>北京市</item>
+        <item>河北省</item>
+        <item>河南省</item>
+        <item>山东省</item>
+    </string-array>
+</resources>

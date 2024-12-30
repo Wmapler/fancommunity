@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="unit">
+        <item>一单元</item>
+        <item>二单元</item>
+        <item>三单元</item>
+        <item>四单元</item>
+        <item>五单元</item>
+    </string-array>
+</resources>
